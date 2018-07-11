@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pointcloud_manipulation</name>
+  <version>0.0.0</version>
+  <description>The pointcloud manipulation package</description>
+  <license>BSD</license>
+  <maintainer email="yibo211@gmail.com">eaborn</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+</package>
