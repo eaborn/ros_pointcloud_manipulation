@@ -5,8 +5,9 @@ project(pointcloud_manipulation)
 find_package(catkin REQUIRED COMPONENTS 
   roscpp
   sensor_msgs
-  tf2_sensor_msgs
+  tf
   geometry_msgs
+  pcl_ros
 )
 
 ###################################
@@ -19,14 +20,14 @@ catkin_package(
   CATKIN_DEPENDS
   roscpp
   sensor_msgs
-  tf2_sensor_msgs
+  tf
   geometry_msgs
+  pcl_ros
 )
 
 ###########
 ## Build ##
 ###########
-
 
 set(TARGET_NAME pointcloud_manipulation)
 
@@ -39,14 +40,10 @@ target_include_directories(${TARGET_NAME}
 target_link_libraries(${TARGET_NAME}
 	${catkin_LIBRARIES}
 	${roscpp_LIBRARIES} 
-	${tf2_LIBRARIES}
+  ${tf_LIBRARIES}
+  ${PCL_LIBRARIES}
 	
 )
-
-MESSAGE( STATUS "variable is: " ${tf_LIBRARIES} )
-MESSAGE( STATUS "variable is: " ${catkin_LIBRARIES} )
-
-	
 
 #############
 ## Install ##
