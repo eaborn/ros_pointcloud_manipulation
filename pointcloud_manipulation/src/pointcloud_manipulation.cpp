@@ -23,13 +23,21 @@ public:
 		tf::Transform transform;
 
 		//initialize the transformation parameters
-		x = 0;
-		y = 5;
-		z = 0;
-		roll = 0;
-		pitch = 0;
-		yaw = M_PI/2;
-	
+		// x = 0;
+		// y = 5;
+		// z = 0;
+		// roll = 0;
+		// pitch = 0;
+		// yaw = M_PI/2;
+
+		// get parameters from launch file
+		node_handle.getParam("/pointcloud_manipulation/x", x);
+		node_handle.getParam("/pointcloud_manipulation/y", y);
+		node_handle.getParam("/pointcloud_manipulation/z", z);
+		node_handle.getParam("/pointcloud_manipulation/roll", roll);
+		node_handle.getParam("/pointcloud_manipulation/pitch", pitch);
+		node_handle.getParam("/pointcloud_manipulation/yaw", yaw);
+
 		//set up transform
 		transform.setOrigin(tf::Vector3(x, y, z));
 		tf::Quaternion q;
