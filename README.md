@@ -30,14 +30,18 @@ The parameters of angular rotations and linear translations can be set in the la
 2. `rosrun rviz rviz`
 3. replay bag file: `rosbag play test.bag`
 4. visualization pointcloud 
-	* visualization of /velodyne_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/velodyne_points`, set `Fixed Frame` under `Global Options` to 'velodyne'
-	* visualization of /manipulate_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/manipulate_points`, set `Fixed Frame` under `Global Options` to 'transform_frame'
+	* visualization of /velodyne_points: `Add` -> `pointcloud2`, set `Topic` under `PointCloud2` to `/velodyne_points`, set `Fixed Frame` under `Global Options` to 'velodyne'
+	* visualization of /manipulate_points: `Add` -> `pointcloud2`, set `Topic` under `PointCloud2` to `/manipulate_points`, set `Fixed Frame` under `Global Options` to 'transform_frame'
 5. optional: visualization of transformation of frame
 	* `Add` -> `Axis` and `Add` -> `TF`
 
-## Visualization of frames and node
+## useful command
+
 * `rosrun tf view_frames`
 * `rqt_graph`
+* `rostopic list`
+* `rostopic echo`
+* `rosbag info`
 
 ## Result
 
