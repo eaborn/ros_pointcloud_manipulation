@@ -90,7 +90,7 @@ public:
 		pl_sub = node_handle.subscribe<sensor_msgs::PointCloud2>("/velodyne_points", 10, &PointCloudManipulation::pl_transform, this);
 		// Setup publisher
 		pl_pub = node_handle.advertise<sensor_msgs::PointCloud2>("/manipulate_points", 1);
-		transform_pub = node_handle.advertise<geometry_msgs::TransformStamped>("/transform_betwen_frame", 1);
+		transform_pub = node_handle.advertise<geometry_msgs::TransformStamped>("/transform_between_frame", 1);
 	}
 
 private:
