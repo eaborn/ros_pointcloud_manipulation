@@ -1,5 +1,7 @@
 # ros_pointcloud_manipulation
 
+## Description
+
 This project enables the pointcloud manipulation funciton including **angular rotations** (roll, pitch, yaw) and **linear translations** (x, y, z) between two frames.
 
 The node subscribe to rostopic: /velodyne_points and publish two new rostopic: /manipulate_points and /transformation_between_frame
@@ -27,9 +29,24 @@ The parameters of angular rotations and linear translations can be set in the la
 1. open another terminal
 2. `rosrun rviz rviz`
 3. replay bag file: `rosbag play test.bag`
-3. visualization pointcloud 
-* visualization of /velodyne_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/velodyne_points`, set `Fixed Frame` under `Global Options` to 'velodyne'
-* visualization of /manipulate_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/manipulate_points`, set `Fixed Frame` under `Global Options` to 'transform_frame'
-4. visualization of transformation of frame
-* `Add` -> 'Axis' and `Add` -> `TF`
+4. visualization pointcloud 
+	* visualization of /velodyne_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/velodyne_points`, set `Fixed Frame` under `Global Options` to 'velodyne'
+	* visualization of /manipulate_points: `Add` -> `pointcloud2`, set `Topic` under 'PointCloud2' to `/manipulate_points`, set `Fixed Frame` under `Global Options` to 'transform_frame'
+5. optional: visualization of transformation of frame
+	* `Add` -> `Axis` and `Add` -> `TF`
+
+## Visualization of frames and node
+* `rosrun tf view_frames`
+* `rqt_graph`
+
+## Result
+
+![png](./pointcloud.png)
+![png](./frames.png)
+![png](./rosgraph.png)
+
+
+
+
+
 
